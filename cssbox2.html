@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: #555;
+            display: flex;
+            /* 打开弹性盒 */
+            flex-direction: column;
+            /* row 左对齐
+            row-reverse 右对齐
+            column 纵向排列
+            column-reverse 纵向翻转*/
+            justify-content: center;
+            /* 主轴方向（最左侧一列）flex-start 从上到下
+            flex-end 从下端开始排列
+            center 中间 */
+            align-items: center;
+            /* 纵向 flex-start 左对齐
+            flex-end 右对齐
+            center 居中 */
+        }
+        
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            flex: 2;
+            /* flex优先级大于高宽，表示权重 */
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            flex: 2;
+        }
+         
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            flex: 1;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

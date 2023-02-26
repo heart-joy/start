@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .xiandui{
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            position: relative;
+            /* 相对定位 */
+            left: 10px;
+            top: 50px;
+            z-index: 100;
+            /* z-index值越大层级越高 */
+        }
+
+        .juedui{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            /* 绝对定位 */
+            left: 200px;
+            top: 10px;
+            z-index: 50;
+        }
+        /* 绝对定位下，一个容器为一层，相互遮盖 */
+
+        .guding{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            position: fixed;
+            left: 50px;
+            top: 30px;
+        }
+        /* 固定定位 脱离文档流 保持在屏幕某一位置不随页面滚动而改变位置*/
+        h3{
+            height: 500px;
+        }
+
+        /* 定位是相对父级元素的，若父级元素没有定位则以整个页面为父级元素进行定位 */
+    </style>
+</head>
+<body>
+    <div class="xiandui"></div>
+    <div class="juedui"></div>
+    <div class="guding"></div>
+
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+
+</body>
+</html>

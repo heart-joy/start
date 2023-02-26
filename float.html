@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            float: left;
+            /* 浮动：脱离文档流 */
+            /* 脱离后在标准流上一层 */
+            /* 浮动脱离后父级元素会有高度塌陷（变为0） */
+        }
+
+        .container{
+            width: 400px;
+            height: 400px;
+            background-color: blueviolet;
+        }
+
+        img{
+            width: 300px;
+            float: right;
+        }
+
+        ul li{
+            float: left;
+            margin: 10px 50px;
+        }
+
+        .box5{
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="container"></div>
+    <div class="box5">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+
+    <ul>
+        <li><a href="#">导航1</a></li>
+        <li><a href="#">导航2</a></li>
+        <li><a href="#">导航2</a></li>
+    </ul>
+</body>
+</html>

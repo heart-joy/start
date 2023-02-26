@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 400px;
+            /* 给父级元素增加高度 防止浮动造成的高度塌陷 */
+            background-color: blueviolet;
+            overflow: hidden;
+            clear: both;
+            /* 当父级元素高度不确定时 添加overflow:hidden(与clear一起使用)*/
+        }
+
+        .container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        /* 伪对象方式去浮动 */
+        .box{
+            width: 100px;
+            height: 100px;
+            float: left;
+            background-color: aqua;
+            margin: 10px;
+        }
+        .text{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            clear: both;
+            margin: 10px;
+            /* clear 清除浮动影响（谁有问题谁clear）*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="text"></div>
+    </div>
+   
+</body>
+</html>
