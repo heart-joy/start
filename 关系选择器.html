@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li{
+            color:blue;
+        }
+        /* 后代选择器 */
+        div>p{
+            color: brown;
+        }
+        /* 子代选择器（仅仅只有子代可以，孙代不可以）*/
+        div+p{
+            color: chartreuse;
+        }
+        /* 相邻兄弟（往下找的第一个）选择器 */
+        div~p{
+            color:red;
+        }
+        /* 通用兄弟选择器（往下的兄弟都行） */
+    </style>
+</head>
+<body>
+    <div>
+        <p>大家好</p>
+        <ul>
+            <li>
+                <p>我很好</p>
+            </li>
+        </ul>
+    </div>
+    <p>hello</p>
+    <p>world</p>
+</body>
+</html>
