@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            text-align: center;
+            width: 300px;
+            height: 500px;
+            background-color: red;
+        }
+
+        div:hover{
+            animation: Myframs 3s linear 0s infinite;
+            /* animation: 动画名称 设置动画持续时间 
+            效果速率（ease:逐渐变慢（默认）；linear:匀速；ease-in：加速；ease-out：减速；ease-in-out：先加速后减速） 开始时间 循环次数（infinite为无限循环） 
+            播放方向（normal：向前播放；alternate:第偶数次向前，第奇数次向后）*/
+            animation-play-state: running;
+            /* running 鼠标碰到跑 pause 鼠标碰到就停 */
+        }
+
+        @keyframes Myframs{ 
+            0%{
+                background-color: red;
+            }
+            25%{
+                width:500px;
+                background-color: aquamarine;
+            }
+            50%{
+                width: 200px;
+                background-color: green;
+            }
+            75%{
+                width: 200px;
+                background-color: aqua;
+            }
+            100%{
+                background-color: red;
+            }
+        }
+
+        .text{
+            color: aliceblue;
+            float: left;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span class="text">spc</span>
+    </div>
+</body>
+</html>
